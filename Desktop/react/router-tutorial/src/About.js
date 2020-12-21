@@ -4,7 +4,7 @@ import qs from 'qs';
 
 const About = ({ location }) => {
   const query = qs.parse(location.search, {
-    ignoreQueryPrefix: true
+    ignoreQueryPrefix: true // 이 설정을 통해 문자열 맨 앞의 ? 생략
   });
   const detail = query.detail === 'true'; // 쿼리의 파싱결과값은 문자열입니다.
 
